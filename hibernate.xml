@@ -1,0 +1,27 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+
+<!--  JDBC Database Connection server -->
+<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+<property name="connection.url">jdbc:mysql://localhost:3306/employee_tracker?useSSL=false</property>
+<property name="connection.username">hbemployee</property>
+<property name="connection.password">hbemployee</property>
+
+<!-- Database connection pool -->
+<property name="connection.pool_size">1</property>
+
+<!--  setting SQL dialect -->
+<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+<!-- echo the sql to stdout -->
+<property name="show_sql">true</property>
+
+<!--  set the current session context -->
+<property name="current_session_context_class">thread</property>
+
+</session-factory>
+</hibernate-configuration>
