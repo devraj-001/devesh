@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>SHU-Kart</title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+</head>
+<body style='background-image:url("https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+background-repeat: "no-repeat";
+background-size:"cover";
+background-position:"center";
+font-size:"bold";
+background-color:"#0098c8"'>
+<header>
+<h1 id=shukart style="text-align:center; color:white">SHU-Kart</h1>
+<p>
+<h4 style="text-align:center; font-family:Helvetica; color:white">Lace the Race!</h4>
+</p>
+</header>
+<div class= "container">
+<form class="form-signin" 
+	th:action="@{/api/shukart/list}" method="get" >
+	  	<center>
+	    <legend style="color:white"><h2 class="form-signin-heading" >Please sign in</h2>
+		</legend>
+		</center>
+		<center>	
+		<p>
+        <label for="username" class="sr-only">Username</label>
+        <input type="text" id="username" name="username" class="class=col-form-label col-3" placeholder="Username" required autofocus>
+        </p>
+        </center>
+		<center> 
+		<p>
+        <label for="password" class="sr-only">Password</label>
+        <input type="password" id="password" name="password" class="class=col-form-label col-3 row-1" placeholder="Password" required>
+        </p>
+        </center>
+		<center>
+		<input name="_csrf" type="hidden" value="bb4aee6d-81bb-4401-98b6-640fd0b22804" />
+        <button class=" class=col-form-label col-3 btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+      	</center>
+
+		<center><legend style="color:white">
+		<h6> <a th:href="@{/api/shukart/forgotpassword}"> Forgot Password ? </a></h6>
+		</legend></center>
+
+
+
+</form>
+</div>
+<br>
+<p id="copyright" style="text-align:center; color:white">
+Copyright&copy 2021, All Rights Reserved
+</p>
+</body>
+</html>

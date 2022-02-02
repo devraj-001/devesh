@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Shu-Kart</title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container">
+<div>
+<h1 style="text-align:center"> Welcome to Shu-Kart</h1>
+</div>
+<div class="signup text-center"> 
+<h3>If you are new to the Kart! <a th:href="@{/api/shukart/signup}">Register</a></h3>
+</div>
+<h3 style="text-align:center"> OR</h3>
+<div class="login text-center">
+<h3> <a th:href="@{/api/shukart/login}">Login</a></h3>
+</div>
+</div>
+</body>
+</html>

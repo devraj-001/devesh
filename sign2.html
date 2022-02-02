@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>SHU-Kart</title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+</head>
+
+<body style='background-image:url("https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+background-repeat: "no-repeat";
+background-size:"cover";
+background-position:"center";
+font-size:"bold";
+background-color:"#0098c8"'>
+<header>
+<h1 id=shukart style="text-align:center; color:white">SHU-Kart</h1>
+<p>
+<h4 style="text-align:center; font-family:Helvetica; color:white">Lace the Race!</h4>
+</p>
+</header>
+<form th:action="@{/api/shukart/registered}" method="post" 
+style="max-width:600px; margin: 0 auto;" 
+th:object="${user}">
+
+<legend id="legend" style="font-size:50px; text-align:center; color:white"><centre>SignUp</centre></legend>
+<div class="m-3">
+	<div class="form-group row">
+		<label class="class=col-form-label col-3">.</label>
+			<div class="col-6">
+				<input type="text" class="form-control" placeholder="First Name" 
+				 th:field="*{firstname}" required 
+				 minlength="2" maxlength="20" />
+			</div>
+	</div>
+	
+	<div class="form-group row">
+		<label class="class=col-form-label col-3">.</label>
+			<div class="col-6">
+				<input type="text" class="form-control" placeholder="Last Name"
+				 th:field="*{lastname}" required 
+				 minlength="2" maxlength="20"  />
+			</div>
+	</div>
+			
+	<div class="form-group row">
+		<label class="class=col-form-label col-3">.</label>
+			<div class="col-6">
+				<input type="radio" id="male" name="male"
+				th:value="Male" 
+				th:field="*{gender}" required />
+				<label  for="Male" style="color:white">MALE</label>
+				<input type="radio" id="female" name="female"
+				th:value="Female" 
+				th:field="*{gender}" required />
+				<label  for="Female" style="color:white">FEMALE</label>
+			</div>
+	</div>
+
+	<div class="form-group row">
+		<label class="class=col-form-label col-3">.</label>
+			<div class="col-6">
+				<input type="email" class="form-control" placeholder="Email"
+				th:field="*{email}" required  />
+			</div>
+	</div>
+	
+	<div class="form-group row">	
+		<label class="class=col-form-label col-3">.</label>
+			<div class="col-6">
+				<input type="password" class="form-control" placeholder="********"
+				 minlength="6" maxlength="8"  th:field="*{password}" required />
+			</div>
+	</div>
+	
+	<div class="form-group row">	
+		<label class="class=col-form-label col-3">.</label>
+			<div class="col-6">
+				<input type="date" class="form-control" placeholder="26-09-1995"
+				th:field="*{dob}" required   />
+			</div>
+	</div>
+
+	<div class="form-group row">
+		<label class="class=col-form-label col-3">. </label>
+			<div class="col-6">		
+		<!--		<input list="country" class="form-control" th:field="*{country}" required/> -->
+					<select id="country"class="form-control" th:field="*{country}" required >
+					<option value="India">India</option>
+					<option value="Australia">Australia</option>
+					<option value="USA">USA</option>
+					<option value="UK">UK</option>
+					<option value="South Africa">South Africa</option>
+					<option value="France">France</option>
+					<option value="Maldives">Maldives</option>
+					<option value="Singapore">Singapore</option>
+					</select>
+			</div>
+	</div>
+
+	<div class="form-group row">
+		<label class="class=col-form-label col-3">.</label>
+			<div class="col-6">	
+				<input type="text" class="form-control" placeholder="1234567890"
+				th:field="*{mobile}" required 
+				 length="10"  />
+			</div>
+	</div>
+	
+	<div class="form-group row">
+		<label class="class=col-form-label col-3">.</label>
+			<div class="col-6">			
+				<input type="text" class="form-control" placeholder="yourexample@abc.com"
+				th:field="*{website}"  
+				 minlength="8" maxlength="30" />
+			</div>
+	</div>				 
+</div>
+
+<div>
+<center><button type="submit" class="btn btn-primary">Sign Up</button></center>
+</div>
+
+
+</form>
+<br>
+<p id="copyright" style="text-align:center; color:white">
+Copyright&copy 2021, All Rights Reserved
+</p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>SHU-Kart</title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+</head>
+
+<body style='background-image:url("https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+background-repeat: "no-repeat";
+background-size:"cover";
+background-position:"center";
+font-size:"bold";
+background-color:"#0098c8"'>
+<header>
+<h1 id=shukart style="text-align:center">SHU-Kart</h1>
+<p>
+<h4 style="text-align:center; font-family:Helvetica">Lace the Race!</h4>
+</p>
+</header>
+
+<div class="container text-center">
+	<div>
+		<h3> You have Signed Up successfully !</h3>
+		<h4> <a th:href="@{/api/shukart/login}"> <button> Log In </button></a></h4>
+	
+	</div>
+
+</div>
+
+</body>
+</html>

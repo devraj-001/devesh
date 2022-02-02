@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>StoryyHub</title>
+<link rel="stylesheet" href="signup.css">
+<script type="text/javascript" src="submit.js">
+</script>
+</head>
+<body>
+<header>
+<h1 id=story>StoryHub</h1>
+<p>
+<span id=details>You can enter your details and get register yourself for the upcoming information and events of the storyyhub.</span>
+</p>
+</header>
+<form id="aform" action=confirmation.jsp>
+<table width=350px;>
+<legend id="legend" style="font-size:100px;">SignUp</legend>
+<div class="frame">
+<tr><td><label for="fname" id="firstname">FirstName:</label></td>
+
+<td><input type="text" id="fName" name="firstname" value="" placeholder="Enter your first name"></td>
+<td><label for="lName" id="lastname">LastName:</label></td>
+
+<td><input type="text" id="lName" name="lastname" value="" placeholder="Enter your last name"></td></tr>
+
+<tr><td><label for="gender" id="gender">Gender:</label></td>
+
+<td><input type="radio" name="gender" class="g1" value="Male">
+<label for="Male">MALE</label></td>
+<td><input type="radio" name="gender" class="g2" value="Female">
+<label for="Female">FEMALE</label></td></tr>
+
+<tr><td><label for="email" id="email">Email:</label></td>
+
+<td><input type="email" class="email" name="gmail" value="" placeholder="Enter your email"></td>
+
+<td><label for="password" id="pwd">Password:</label></td>
+
+<td><input type="password" class="pwd" value=""></td></tr>
+
+<tr><td><label for ="dob" id="dob">DateofBirth:</label></td>
+
+<td><input type="date" name="dob" value=" " class="dob" placeholder="26-09-1995"></td>
+<td><label for="country">Country: </label></td>
+
+<td><input list="country" name="location">
+<datalist id="country">
+<option value="India">
+<option value="Australia">
+<option value="USA">
+<option value="UK">
+<option value="South Africa">
+<option value="France">
+<option value="Maldives">
+<option value="Singapore">
+</datalist></td></tr>
+
+<tr><td><label for="mob" id="mob">Mobile No:</label></td>
+
+<td><input type="text" name="contact" value="" class="mob" placeholder="1234567890"></td>
+
+<td><label for="website" id="web">Website:</label></td>
+		
+<td><input type="website" name="web" value="" class="web" placeholder="yourexample@abc.com"></td></tr>
+</div>
+<center>
+<div class="container">
+<tr><td><label id="btn" type="submit" form="aform"></label></td>
+<td><input type="button" value="Submit" onclick="submit()"/></td></tr>
+</div>
+</center>
+</table>
+</form>
+<tr><td><p id="copyright" style="text-align:center">
+Copyright&copy 2021, All Rights Reserved
+</p></td></tr>
+</body>
+</html>
